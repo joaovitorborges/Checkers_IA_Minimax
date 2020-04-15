@@ -13,11 +13,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Damas/Damas.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+            <state relative-caret-position="56">
+              <caret line="229" column="157" selection-start-line="229" selection-start-column="157" selection-end-line="229" selection-end-column="157" />
               <folding>
                 <element signature="e#767#1148#0" />
-                <element signature="e#3007#4422#0" />
+                <element signature="e#3221#5325#0" />
                 <element signature="e#5130#7012#0" />
                 <element signature="e#4874#6618#0" />
                 <element signature="e#7401#7696#0" />
@@ -43,8 +43,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1241" />
-    <option name="y" value="-22" />
+    <option name="x" value="-1565" />
+    <option name="y" value="-17" />
     <option name="width" value="989" />
     <option name="height" value="1062" />
   </component>
@@ -53,29 +53,11 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Checkers_IA_Minimax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Checkers_IA_Minimax" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Checkers_IA_Minimax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Checkers_IA_Minimax" type="462c0819:PsiDirectoryNode" />
-              <item name="Damas" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -148,7 +130,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914925" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5006974" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42677826" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39888424" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -170,11 +152,11 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Damas/Damas.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+        <state relative-caret-position="56">
+          <caret line="229" column="157" selection-start-line="229" selection-start-column="157" selection-end-line="229" selection-end-column="157" />
           <folding>
             <element signature="e#767#1148#0" />
-            <element signature="e#3007#4422#0" />
+            <element signature="e#3221#5325#0" />
             <element signature="e#5130#7012#0" />
             <element signature="e#4874#6618#0" />
             <element signature="e#7401#7696#0" />

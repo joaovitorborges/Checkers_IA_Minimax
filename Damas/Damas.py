@@ -1,12 +1,14 @@
 import string
+
+
 tabuleiro = [[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
              [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
              [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+             [' ', 'P', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
              [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
              [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
              [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
-             [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
-             [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+             [' ', ' ', ' ', ' ', ' ', 'B', ' ', ' ', ' ', ' '],
              [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
              [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']]
 
@@ -52,12 +54,14 @@ def Player_Can_Capture(tabuleiro):
             if tabuleiro[i][j] == 'B':
                 for k in range(10):
                     for l in range(10):
-                        if tabuleiro[k][l] == 'p' and Is_Open_Diagonal_Capture(i,j,k,l):  #CONFERIR ESPACO VAZIO DEPOIS DA PECA A SER COMIDA
+
+                        if tabuleiro[k][l] == 'p' and Is_Open_Diagonal_Capture(i,j,k,l)[0]:  #CONFERIR ESPACO VAZIO DEPOIS DA PECA A SER COMIDA
                             return True
 
     return False
 
-def Is_Open_Diagonal_Capture(X,Y,toX,toY):
+def Is_Open_Diagonal_Capture(X,Y,toX,toY):   # returns if its possible to capture and what direction it can
+
     if (X-toX == Y - toY) or (-1*(X-toX) == Y - toY) :      # if its diagonal
         if X < toX:
             if Y < toY:       # if its down-right
@@ -65,49 +69,51 @@ def Is_Open_Diagonal_Capture(X,Y,toX,toY):
                 AY = toY-1
                 while(AX != X and AY != Y):
                     if tabuleiro[AX][AY] != ' ':
-                        return False
+                        return (False,-1,-1)
                     AX -= 1
                     AY -= 1
                 if toX+1 < 10 and toY+1 < 10:
                     if(tabuleiro[toX+1][toY+1] == ' '):  # and can move after the enemy piece
-                        return True
+                        return (True,-1,-1)
 
             elif Y > toY:     # if its down-left
                 AX = toX - 1
                 AY = toY + 1
                 while (AX != X and AY != Y):
                     if tabuleiro[AX][AY] != ' ':
-                        return False
+                        return (False,-1,+1)
                     AX -= 1
                     AY += 1
                 if toX + 1 < 10 and toY - 1 > -1:
                     if (tabuleiro[toX + 1][toY - 1] == ' '):  # and can move after the enemy piece
-                        return True
+                        return (True,-1,+1)
         elif X > toX:
+
             if Y < toY:       # if its up-right
                 AX = toX + 1
                 AY = toY - 1
                 while (AX != X and AY != Y):
                     if tabuleiro[AX][AY] != ' ':
-                        return False
+                        return (False,+1,-1)
                     AX += 1
                     AY -= 1
                 if toX - 1 > -1 and toY + 1 < 10:
                     if (tabuleiro[toX - 1][toY + 1] == ' '): # and can move after the enemy piece
-                        return True
+                        return (True,+1,-1)
 
             elif Y > toY:     # if its up-left
                 AX = toX + 1
                 AY = toY + 1
                 while (AX != X and AY != Y):
                     if tabuleiro[AX][AY] != ' ':
-                        return False
+                        return (False,+1,+1)
                     AX += 1
                     AY += 1
                 if toX - 1 > -1 and toY - 1 > -1:
                     if (tabuleiro[toX - 1][toY - 1] == ' '): # and can move after the enemy piece
-                        return True
-    return False
+                        return (True,+1,+1)
+
+    return (False,0,0)
 
 def Is_Open_Diagonal(X,Y,toX,toY):
     if (X-toX == Y - toY) or (-1*(X-toX) == Y - toY) :      # if its diagonal
@@ -181,6 +187,7 @@ def Player_Move(piece, position):  #Move("4b","5c")
                         tabuleiro[toX][toY] = selected             # puts the piece on the destiny position
                         moved = True
 
+
                     elif toY < Y and tabuleiro[X-1][Y-1] == 'p':   # if the destiny is to the left, and its diagonal left is a 'p'
                         print(tabuleiro[X-1][Y-1])
                         tabuleiro[X][Y] = ' '                      # cleans the position selected
@@ -197,6 +204,34 @@ def Player_Move(piece, position):  #Move("4b","5c")
                     tabuleiro[toX][toY] = selected
                     moved = True
 
+                else:
+                    result = Is_Open_Diagonal_Capture(X, Y, toX, toY)  # what direction it can capture
+                    dx = result[1]
+                    dy = result[2]
+
+                    aux_X = toX+dx
+                    aux_Y = toY+dy
+
+                    between = []        #  whats between the destiny and the piece
+                    between_coord = []  #  the position of the p and P between destiny and piece
+
+                    while(aux_X!=X and aux_Y!=Y):
+                        between.append(tabuleiro[aux_X][aux_Y])      # adds all that is between destiny and piece
+                        if(tabuleiro[aux_X][aux_Y] == 'p' or 'P'):   # if its a p or P, saves its coordinates
+                            between_coord.append((aux_X,aux_Y))
+                        aux_X += dx
+                        aux_Y += dy
+
+
+                    for i in range(len(between)):       # sets all to lower
+                        between[i] = between[i].lower()
+
+                    #print(between)
+                    if(between.count('p')==1 and between.count('b') == 0): # only moves and captures if theres only one enemy piece between piece and destiny
+                        tabuleiro[X][Y] = ' '
+                        tabuleiro[between_coord[0][0]][between_coord[0][1]] = ' '
+                        tabuleiro[toX][toY] = selected
+                        moved = True
 
         print("==================================================")
         if(can_capture and not moved):
@@ -231,9 +266,11 @@ pega posicao
 """
 
 
+
 print("CHECKERS")
 while(True):
     Print_Board()
+
     player_moved = False
     while(not player_moved):
         player_moved = Player_Move(input(), input())
