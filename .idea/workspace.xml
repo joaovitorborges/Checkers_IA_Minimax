@@ -13,15 +13,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Damas/Damas.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="229" column="157" selection-start-line="229" selection-start-column="157" selection-end-line="229" selection-end-column="157" />
+            <state relative-caret-position="502">
+              <caret line="277" column="52" lean-forward="true" selection-start-line="277" selection-start-column="52" selection-end-line="277" selection-end-column="52" />
               <folding>
-                <element signature="e#767#1148#0" />
-                <element signature="e#3221#5325#0" />
-                <element signature="e#5130#7012#0" />
-                <element signature="e#4874#6618#0" />
-                <element signature="e#7401#7696#0" />
-                <element signature="e#7698#7951#1" />
+                <element signature="e#768#1149#0" />
+                <element signature="e#1190#3169#0" />
+                <element signature="e#2907#3151#0" />
+                <element signature="e#3284#5388#0" />
+                <element signature="e#5429#6844#0" />
               </folding>
             </state>
           </provider>
@@ -43,17 +42,20 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1565" />
-    <option name="y" value="-17" />
-    <option name="width" value="989" />
-    <option name="height" value="1062" />
+    <option name="x" value="-1566" />
+    <option name="y" value="-18" />
+    <option name="width" value="990" />
+    <option name="height" value="1063" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -123,9 +125,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1618" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -152,15 +153,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Damas/Damas.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="229" column="157" selection-start-line="229" selection-start-column="157" selection-end-line="229" selection-end-column="157" />
+        <state relative-caret-position="502">
+          <caret line="277" column="52" lean-forward="true" selection-start-line="277" selection-start-column="52" selection-end-line="277" selection-end-column="52" />
           <folding>
-            <element signature="e#767#1148#0" />
-            <element signature="e#3221#5325#0" />
-            <element signature="e#5130#7012#0" />
-            <element signature="e#4874#6618#0" />
-            <element signature="e#7401#7696#0" />
-            <element signature="e#7698#7951#1" />
+            <element signature="e#768#1149#0" />
+            <element signature="e#1190#3169#0" />
+            <element signature="e#2907#3151#0" />
+            <element signature="e#3284#5388#0" />
+            <element signature="e#5429#6844#0" />
           </folding>
         </state>
       </provider>

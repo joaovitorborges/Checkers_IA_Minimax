@@ -9,8 +9,8 @@ tabuleiro = [[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
              [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
              [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
              [' ', ' ', ' ', ' ', ' ', 'B', ' ', ' ', ' ', ' '],
-             [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
-             [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']]
+             [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'p', ' '],
+             [' ', ' ', ' ', ' ', ' ', ' ', ' ', 'b', ' ', ' ']]
 
 
 def read_pos(pos):          # read inputs such as "9c" or "10d" and return them as coordinates
@@ -33,20 +33,20 @@ def Player_Can_Capture(tabuleiro):
             if tabuleiro[i][j] == 'b':                                                 # if its a 'b' piece
                 if j+2 < 10 :                                                          # if the prediction doesnt goes beyond the size of the board
                     if i-2 >-1:
-                        if tabuleiro[i-1][j+1] == 'p' and tabuleiro[i-2][j+2] == ' ':  # if its diagonal up-right is an enemy and after it its blank
+                        if tabuleiro[i-1][j+1] in ['p','P'] and tabuleiro[i-2][j+2] == ' ':  # if its diagonal up-right is an enemy and after it its blank
                             #print("can move  " ,10-i,string.ascii_letters[j])
                             return True
                     if i + 2 < 10:
-                        if tabuleiro[i+1][j+1] == 'p' and tabuleiro[i+2][j+2] == ' ':  # if its diagonal down-right is an enemy and after it its blank
+                        if tabuleiro[i+1][j+1] in ['p','P'] and tabuleiro[i+2][j+2] == ' ':  # if its diagonal down-right is an enemy and after it its blank
                             #print("can move  " ,10-i,string.ascii_letters[j])
                             return True
                 if j-2 > -1:                                                           # if the prediction doesnt goes beyond the size of the board
                     if i-2 >-1:
-                        if tabuleiro[i-1][j-1] == 'p' and tabuleiro[i-2][j-2] == ' ':  # if its diagonal up-left is an enemy and after it its blank
+                        if tabuleiro[i-1][j-1] in ['p','P'] and tabuleiro[i-2][j-2] == ' ':  # if its diagonal up-left is an enemy and after it its blank
                             #print("can move  " ,10-i,string.ascii_letters[j])
                             return True
                     if i + 2 < 10:
-                        if tabuleiro[i+1][j-1] == 'p' and tabuleiro[i+2][j-2] == ' ':  # if its diagonal down-left is an enemy and after it its blank
+                        if tabuleiro[i+1][j-1] in ['p','P'] and tabuleiro[i+2][j-2] == ' ':  # if its diagonal down-left is an enemy and after it its blank
                             #print("can move  " ,10-i,string.ascii_letters[j])
                             return True
 
@@ -55,7 +55,7 @@ def Player_Can_Capture(tabuleiro):
                 for k in range(10):
                     for l in range(10):
 
-                        if tabuleiro[k][l] == 'p' and Is_Open_Diagonal_Capture(i,j,k,l)[0]:  #CONFERIR ESPACO VAZIO DEPOIS DA PECA A SER COMIDA
+                        if tabuleiro[k][l] in ['p','P'] and Is_Open_Diagonal_Capture(i,j,k,l)[0]:  #CONFERIR ESPACO VAZIO DEPOIS DA PECA A SER COMIDA
                             return True
 
     return False
@@ -179,7 +179,7 @@ def Player_Move(piece, position):  #Move("4b","5c")
                     moved = True
 
                 elif toX == X-2 and toY-Y in[2,-2]:
-                    if toY > Y and tabuleiro[X-1][Y+1] == 'p':     # if the destiny is to the right, and its diagonal right is a 'p'
+                    if toY > Y and tabuleiro[X-1][Y+1] in ['p','P']:     # if the destiny is to the right, and its diagonal right is a 'p'
                         tabuleiro[X][Y] = ' '                      # cleans the position selected
                         tabuleiro[X-1][Y+1] = ' '                  # kills the diagonal enemy piece
                         if toX == 0:  # if piece reaches top, turns into King
@@ -188,7 +188,7 @@ def Player_Move(piece, position):  #Move("4b","5c")
                         moved = True
 
 
-                    elif toY < Y and tabuleiro[X-1][Y-1] == 'p':   # if the destiny is to the left, and its diagonal left is a 'p'
+                    elif toY < Y and tabuleiro[X-1][Y-1] in ['p','P']:   # if the destiny is to the left, and its diagonal left is a 'p'
                         print(tabuleiro[X-1][Y-1])
                         tabuleiro[X][Y] = ' '                      # cleans the position selected
                         tabuleiro[X-1][Y-1] = ' '                  # kills the diagonal enemy piece
@@ -217,7 +217,7 @@ def Player_Move(piece, position):  #Move("4b","5c")
 
                     while(aux_X!=X and aux_Y!=Y):
                         between.append(tabuleiro[aux_X][aux_Y])      # adds all that is between destiny and piece
-                        if(tabuleiro[aux_X][aux_Y] == 'p' or 'P'):   # if its a p or P, saves its coordinates
+                        if(tabuleiro[aux_X][aux_Y] in ['p','P']):   # if its a p or P, saves its coordinates
                             between_coord.append((aux_X,aux_Y))
                         aux_X += dx
                         aux_Y += dy
@@ -232,6 +232,8 @@ def Player_Move(piece, position):  #Move("4b","5c")
                         tabuleiro[between_coord[0][0]][between_coord[0][1]] = ' '
                         tabuleiro[toX][toY] = selected
                         moved = True
+
+
 
         print("==================================================")
         if(can_capture and not moved):
