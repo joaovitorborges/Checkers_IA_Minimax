@@ -11,41 +11,67 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Damas/Damas.py">
+        <entry file="file://$PROJECT_DIR$/Damas.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="277" column="52" lean-forward="true" selection-start-line="277" selection-start-column="52" selection-end-line="277" selection-end-column="52" />
+            <state relative-caret-position="169">
+              <caret line="115" column="22" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
               <folding>
-                <element signature="e#768#1149#0" />
-                <element signature="e#1190#3169#0" />
-                <element signature="e#2907#3151#0" />
-                <element signature="e#3284#5388#0" />
-                <element signature="e#5429#6844#0" />
+                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#153#534#0" />
+                <element signature="e#564#605#0" />
+                <element signature="e#575#2594#0" />
+                <element signature="e#2634#4856#0" />
+                <element signature="e#5042#5232#0" />
+                <element signature="e#5357#7566#0" />
+                <element signature="e#7325#8740#0" />
+                <element signature="e#9205#10962#0" />
+                <element signature="e#11146#11251#0" />
+                <element signature="e#13101#13396#0" />
+                <element signature="e#13398#13651#1" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Damas/Damas.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Damas.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Main.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Damas/Damas.py" />
+        <option value="$PROJECT_DIR$/Damas/Main.py" />
+        <option value="$PROJECT_DIR$/Main.py" />
+        <option value="$PROJECT_DIR$/Damas.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1566" />
-    <option name="y" value="-18" />
-    <option name="width" value="990" />
-    <option name="height" value="1063" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-9" />
+    <option name="width" value="977" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -53,13 +79,30 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Checkers_IA_Minimax" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Checkers_IA_Minimax" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\5 periodo\Inteligência artificial\Checkers_IA_Minimax" />
+      <recent name="D:\5 periodo\Inteligência artificial\Checkers_IA_Minimax\Damas" />
+      <recent name="D:\5 periodo\Inteligência artificial\Checkers_IA_Minimax\Damas\.idea" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -73,7 +116,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Main">
     <configuration name="Damas" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Checkers_IA_Minimax" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -86,7 +129,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Damas/Damas.py" />
+      <option name="SCRIPT_NAME" value="D:\5 periodo\Inteligência artificial\Checkers_IA_Minimax\Damas.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Checkers_IA_Minimax" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -97,6 +161,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Main" />
         <item itemvalue="Python.Damas" />
       </list>
     </recent_temporary>
@@ -124,22 +189,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1618" height="877" extended-state="6" />
+    <frame x="-7" y="0" width="815" height="868" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.13544303" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914925" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.42677826" />
+      <window_info anchor="bottom" x="63" y="184" width="1136" height="560" id="Run" order="2" sideWeight="0.4993671" weight="0.48117155" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39888424" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32914925" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006329" side_tool="true" weight="0.48117155" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32914925" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -150,17 +216,42 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Damas.py</url>
+          <line>305</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Damas/Damas.py">
+    <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="277" column="52" lean-forward="true" selection-start-line="277" selection-start-column="52" selection-end-line="277" selection-end-column="52" />
+        <state relative-caret-position="106">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Damas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="115" column="22" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
           <folding>
-            <element signature="e#768#1149#0" />
-            <element signature="e#1190#3169#0" />
-            <element signature="e#2907#3151#0" />
-            <element signature="e#3284#5388#0" />
-            <element signature="e#5429#6844#0" />
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#153#534#0" />
+            <element signature="e#564#605#0" />
+            <element signature="e#575#2594#0" />
+            <element signature="e#2634#4856#0" />
+            <element signature="e#5042#5232#0" />
+            <element signature="e#5357#7566#0" />
+            <element signature="e#7325#8740#0" />
+            <element signature="e#9205#10962#0" />
+            <element signature="e#11146#11251#0" />
+            <element signature="e#13101#13396#0" />
+            <element signature="e#13398#13651#1" />
           </folding>
         </state>
       </provider>
