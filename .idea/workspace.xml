@@ -10,34 +10,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Damas.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="115" column="22" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
+            <state relative-caret-position="1218">
+              <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <element signature="e#153#534#0" />
-                <element signature="e#564#605#0" />
-                <element signature="e#575#2594#0" />
-                <element signature="e#2634#4856#0" />
-                <element signature="e#5042#5232#0" />
-                <element signature="e#5357#7566#0" />
-                <element signature="e#7325#8740#0" />
-                <element signature="e#9205#10962#0" />
-                <element signature="e#11146#11251#0" />
-                <element signature="e#13101#13396#0" />
-                <element signature="e#13398#13651#1" />
+                <element signature="e#590#632#0" />
+                <element signature="e#673#2659#0" />
+                <element signature="e#5346#5917#0" />
+                <element signature="e#5958#6148#0" />
+                <element signature="e#6268#8141#0" />
+                <element signature="e#8192#9607#0" />
+                <element signature="e#10749#15918#0" />
+                <element signature="e#10267#10519#0" />
+                <element signature="e#11889#13089#0" />
+                <element signature="e#14569#14959#0" />
+                <element signature="e#13523#13818#0" />
+                <element signature="e#13820#14073#1" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="114">
+              <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -51,6 +52,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>s</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -63,39 +69,26 @@
       <list>
         <option value="$PROJECT_DIR$/Damas/Damas.py" />
         <option value="$PROJECT_DIR$/Damas/Main.py" />
-        <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/Damas.py" />
+        <option value="$PROJECT_DIR$/Main.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="width" value="977" />
-    <option name="height" value="1040" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-12" />
+    <option name="width" value="980" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Checkers_IA_Minimax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Checkers_IA_Minimax" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -189,7 +182,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="815" height="868" extended-state="0" />
+    <frame x="-8" y="-8" width="1618" height="877" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.13544303" />
@@ -197,7 +190,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914925" />
-      <window_info anchor="bottom" x="63" y="184" width="1136" height="560" id="Run" order="2" sideWeight="0.4993671" weight="0.48117155" />
+      <window_info anchor="bottom" x="63" y="184" width="1136" height="560" id="Run" order="2" sideWeight="0.4993671" weight="0.58577406" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39888424" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -216,43 +209,40 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Damas.py</url>
-          <line>305</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Main.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/copy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="134">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Damas.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="115" column="22" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
+        <state relative-caret-position="1218">
+          <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <element signature="e#153#534#0" />
-            <element signature="e#564#605#0" />
-            <element signature="e#575#2594#0" />
-            <element signature="e#2634#4856#0" />
-            <element signature="e#5042#5232#0" />
-            <element signature="e#5357#7566#0" />
-            <element signature="e#7325#8740#0" />
-            <element signature="e#9205#10962#0" />
-            <element signature="e#11146#11251#0" />
-            <element signature="e#13101#13396#0" />
-            <element signature="e#13398#13651#1" />
+            <element signature="e#590#632#0" />
+            <element signature="e#673#2659#0" />
+            <element signature="e#5346#5917#0" />
+            <element signature="e#5958#6148#0" />
+            <element signature="e#6268#8141#0" />
+            <element signature="e#8192#9607#0" />
+            <element signature="e#10749#15918#0" />
+            <element signature="e#10267#10519#0" />
+            <element signature="e#11889#13089#0" />
+            <element signature="e#14569#14959#0" />
+            <element signature="e#13523#13818#0" />
+            <element signature="e#13820#14073#1" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
         </state>
       </provider>
     </entry>

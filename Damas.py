@@ -53,6 +53,7 @@ def Player_Can_Capture(tabuleiro):
     return False
 
 def Possible_Captures(tabuleiro):
+
     possible_captures = []
 
     for i in range(10):
@@ -87,24 +88,44 @@ def Possible_Captures(tabuleiro):
 
     return possible_captures
 
-def Maior_Captura(lista,c,tabuleiro):
+def Possible_Captures_Piece(tabuleiro, piece):
+    X = piece[0]
+    Y = piece[1]
+    possible_captures = []
 
-    moves = Possible_Captures(tabuleiro)
 
-    M = c
-    Bmove = ()
+    if tabuleiro[X][Y] == 'b':  # if its a 'b' piece
+        if Y + 2 < 10:  # if the prediction doesnt goes beyond the size of the board
+            if X - 2 > -1:
+                if tabuleiro[X - 1][Y + 1] in ['p', 'P'] and tabuleiro[X - 2][
+                    Y + 2] == ' ':  # if its diagonal up-right is an enemy and after it its blank
+                    # print("can move  " ,10-i,string.ascii_letters[j])
+                    possible_captures.append(((X, Y), (X - 2, Y + 2)))
+            if X + 2 < 10:
+                if tabuleiro[X + 1][Y + 1] in ['p', 'P'] and tabuleiro[X + 2][
+                    Y + 2] == ' ':  # if its diagonal down-right is an enemy and after it its blank
+                    # print("can move  " ,10-i,string.ascii_letters[j])
+                    possible_captures.append(((X, Y), (X + 2, Y + 2)))
+        if Y - 2 > -1:  # if the prediction doesnt goes beyond the size of the board
+            if X - 2 > -1:
+                if tabuleiro[X - 1][Y - 1] in ['p', 'P'] and tabuleiro[X - 2][
+                    Y - 2] == ' ':  # if its diagonal up-left is an enemy and after it its blank
+                    # print("can move  " ,10-i,string.ascii_letters[j])
+                    possible_captures.append(((X, Y), (X - 2, Y - 2)))
+            if X + 2 < 10:
+                if tabuleiro[X + 1][Y - 1] in ['p', 'P'] and tabuleiro[X + 2][
+                    Y - 2] == ' ':  # if its diagonal down-left is an enemy and after it its blank
+                    # print("can move  " ,10-i,string.ascii_letters[j])
+                    possible_captures.append(((X, Y), (X + 2, Y - 2)))
 
-    for move in moves:
-        copia = deepcopy(tabuleiro)
-        Player_Move(transform_pos(move[0][0],move[0][1]),transform_pos(move[1][0],move[1][1]),copia)
-        R = Maior_Captura(lista,c+1,copia)
-        if R > M:
-            M = R
-            Bmove = move
+    if tabuleiro[X][Y] == 'B':
+        for k in range(10):
+            for l in range(10):
+                result = Is_Open_Diagonal_Capture(X, Y, k, l, tabuleiro)
+                if result[0]:
+                    possible_captures.append(((X, Y), (k, l)))
 
-    if Bmove != ():
-        lista.append(Bmove)
-    return M
+    return possible_captures
 
 def Maior_Captura2(lista,tabuleiro):
 
@@ -117,7 +138,7 @@ def Maior_Captura2(lista,tabuleiro):
 
     for move in moves:
         copia = deepcopy(tabuleiro)
-        Player_Move(transform_pos(move[0][0],move[0][1]),transform_pos(move[1][0],move[1][1]),copia)
+        Player_Move(transform_pos(move[0][0],move[0][1]),transform_pos(move[1][0],move[1][1]),copia,False)
         lista2 = deepcopy(lista)
         lista2.append(move)
         sequence_list.append(Maior_Captura2(lista2,copia))
@@ -132,6 +153,42 @@ def Maior_Captura2(lista,tabuleiro):
 
     return B_sequence
 
+def Maior_Captura3(lista,tabuleiro):
+
+    if len(lista) == 0:
+        moves = Possible_Captures(tabuleiro)
+    else:
+        moves = Possible_Captures_Piece(tabuleiro,lista[-1][1])
+
+
+    if len(moves) == 0:      # se não há capturas possíveis, retorna a sequencia de movimentos que foi feita até aqui
+        return [lista]
+
+    sequence_matrixes = []   # receberá matrizes de melhores movimentos
+
+    for move in moves:       # chama recursão de cada movimento de captura possivel
+        copia = deepcopy(tabuleiro)
+        Player_Move(transform_pos(move[0][0],move[0][1]),transform_pos(move[1][0],move[1][1]),copia,False)  # faz o movimento
+        lista2 = deepcopy(lista)
+        lista2.append(move)
+        sequence_matrixes.append(Maior_Captura3(lista2,copia))   # chama a recursão para o novo estado encontrado, e adiciona o resultado
+                                                                 # de melhores sequencias
+
+    best_size = 0
+    best_sequences = []
+
+    for sequence_list in sequence_matrixes:        # acha a sequencia com tamanho maior
+        for sequence in sequence_list:
+            if len(sequence) > best_size:
+                best_size = len(sequence)
+
+
+    for sequence_list in sequence_matrixes:        # confere se existem outras sequencias com o mesmo tamanho
+        for sequence in sequence_list:
+            if len(sequence) > 0 and len(sequence) == best_size:
+                best_sequences.append(sequence)
+
+    return best_sequences                          # retorna as melhores sequencias possíveis
 
 
 def Only_Enemy_Between(between):
@@ -244,7 +301,7 @@ def Is_Open_Diagonal(X,Y,toX,toY,tabuleiro):
 
 
 
-def Player_Move(piece, position, tabuleiro):  #Move("4b","5c")
+def Player_Move(piece, position, tabuleiro, print_move):  #Move("4b","5c")
         X,Y = read_pos(piece)
         toX,toY = read_pos(position)
 
@@ -262,25 +319,37 @@ def Player_Move(piece, position, tabuleiro):  #Move("4b","5c")
                     tabuleiro[toX][toY] = selected
                     moved = True
 
-                elif toX == X-2 and toY-Y in[2,-2]:
-                    if toY > Y and tabuleiro[X-1][Y+1] in ['p','P']:     # if the destiny is to the right, and its diagonal right is a 'p'
+                elif toX-X in[2,-2] and toY-Y in[2,-2]:                # if its trying to capture
+                    if toX < X and toY > Y and tabuleiro[X-1][Y+1] in ['p','P']:     # if the destiny is up-right, and its diagonal up-right is a 'p'
                         tabuleiro[X][Y] = ' '                      # cleans the position selected
                         tabuleiro[X-1][Y+1] = ' '                  # kills the diagonal enemy piece
-                        if toX == 0:  # if piece reaches top, turns into King
+                        if toX == 0:                               # if piece reaches top, turns into King
                             selected = 'B'
                         tabuleiro[toX][toY] = selected             # puts the piece on the destiny position
                         moved = True
 
+                    elif toX > X and toY > Y and tabuleiro[X + 1][Y + 1] in ['p','P']:  # if the destiny is down-right, and its diagonal down-right is a 'p'
+                            tabuleiro[X][Y] = ' '                  # cleans the position selected
+                            tabuleiro[X + 1][Y + 1] = ' '          # kills the diagonal enemy piece
+                            if toX == 0:                           # if piece reaches top, turns into King
+                                selected = 'B'
+                            tabuleiro[toX][toY] = selected         # puts the piece on the destiny position
+                            moved = True
 
-                    elif toY < Y and tabuleiro[X-1][Y-1] in ['p','P']:   # if the destiny is to the left, and its diagonal left is a 'p'
-                        print(tabuleiro[X-1][Y-1])
+                    elif toX < X and toY < Y and tabuleiro[X-1][Y-1] in ['p','P']:   # if the destiny is up-left, and its diagonal up-left is a 'p'
                         tabuleiro[X][Y] = ' '                      # cleans the position selected
                         tabuleiro[X-1][Y-1] = ' '                  # kills the diagonal enemy piece
-                        if toX == 0:  # if piece reaches top, turns into King
+                        if toX == 0:                               # if piece reaches top, turns into King
                             selected = 'B'
                         tabuleiro[toX][toY] = selected             # puts the piece on the destiny position
                         moved = True
-
+                    elif toX > X and toY < Y and tabuleiro[X+1][Y-1] in ['p','P']:   # if the destiny is down-left, and its diagonal down-left is a 'p'
+                        tabuleiro[X][Y] = ' '                      # cleans the position selected
+                        tabuleiro[X+1][Y-1] = ' '                  # kills the diagonal enemy piece
+                        if toX == 0:                               # if piece reaches top, turns into King
+                            selected = 'B'
+                        tabuleiro[toX][toY] = selected             # puts the piece on the destiny position
+                        moved = True
 
             elif tabuleiro[X][Y] == 'B':
                 if Is_Open_Diagonal(X,Y,toX,toY,tabuleiro) and not can_capture:  # if cant capture, must move diagonaly
@@ -316,14 +385,15 @@ def Player_Move(piece, position, tabuleiro):  #Move("4b","5c")
 
 
 
+        if(print_move):
+            print("==================================================")
+            if(can_capture and not moved):
+                print("movimento impossível, jogador deve obrigatoriamente eliminar uma peça adversária quando possível")
+            elif(not moved):
+                print("movimento impossível")
+            if(moved):
+                print("Jogador moveu de ",piece, "para ",position )
 
-        print("==================================================")
-        if(can_capture and not moved):
-            print("movimento impossível, jogador deve obrigatoriamente eliminar uma peça adversária quando possível")
-        elif(not moved):
-            print("movimento impossível")
-        if(moved):
-            print("Jogador moveu de ",piece, "para ",position )
         return moved
 
 def Print_Board(tabuleiro):
