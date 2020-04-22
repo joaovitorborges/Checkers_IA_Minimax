@@ -10,35 +10,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Damas.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Minimax.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1218">
-              <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
+            <state relative-caret-position="92">
+              <caret line="128" column="20" lean-forward="true" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="20" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <element signature="e#590#632#0" />
-                <element signature="e#673#2659#0" />
-                <element signature="e#5346#5917#0" />
-                <element signature="e#5958#6148#0" />
-                <element signature="e#6268#8141#0" />
-                <element signature="e#8192#9607#0" />
-                <element signature="e#10749#15918#0" />
-                <element signature="e#10267#10519#0" />
-                <element signature="e#11889#13089#0" />
-                <element signature="e#14569#14959#0" />
-                <element signature="e#13523#13818#0" />
-                <element signature="e#13820#14073#1" />
+                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#112#3736#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+            <state relative-caret-position="168">
+              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,13 +47,26 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>s</find>
+      <find>'b'</find>
+      <find>'p'</find>
+      <find>'r'</find>
+      <find>p</find>
+      <find>Esta</find>
+      <find>Estado</find>
+      <find>deepcopy</find>
+      <find>aqui</find>
+      <find>numpy</find>
+      <find>np</find>
+      <find>5.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Damas.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Minimax.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Computer.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Player.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Main.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
@@ -70,25 +75,42 @@
         <option value="$PROJECT_DIR$/Damas/Damas.py" />
         <option value="$PROJECT_DIR$/Damas/Main.py" />
         <option value="$PROJECT_DIR$/Damas.py" />
+        <option value="$PROJECT_DIR$/Minimanx.py" />
+        <option value="$PROJECT_DIR$/Player.py" />
+        <option value="$PROJECT_DIR$/Computer.py" />
+        <option value="$PROJECT_DIR$/Minimax.py" />
         <option value="$PROJECT_DIR$/Main.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-12" />
-    <option name="width" value="980" />
-    <option name="height" value="1044" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-9" />
+    <option name="width" value="977" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Checkers_IA_Minimax" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Checkers_IA_Minimax" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -122,7 +144,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\5 periodo\Inteligência artificial\Checkers_IA_Minimax\Damas.py" />
+      <option name="SCRIPT_NAME" value="D:\5 periodo\Inteligência artificial\Checkers_IA_Minimax\Player.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -152,9 +174,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Minimax" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Checkers_IA_Minimax" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Minimax.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Main" />
+        <item itemvalue="Python.Minimax" />
         <item itemvalue="Python.Damas" />
       </list>
     </recent_temporary>
@@ -182,21 +226,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1618" height="877" extended-state="7" />
+    <frame x="-7" y="0" width="815" height="868" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.13544303" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.23797469" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914925" />
-      <window_info anchor="bottom" x="63" y="184" width="1136" height="560" id="Run" order="2" sideWeight="0.4993671" weight="0.58577406" />
+      <window_info anchor="bottom" x="63" y="184" width="1136" height="560" id="Run" order="2" sideWeight="0.4993671" weight="0.5282486" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39888424" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32914925" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32914925" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006329" side_tool="true" weight="0.48117155" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32914925" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -212,37 +256,52 @@
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/copy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
+        <state relative-caret-position="229">
+          <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Damas.py">
+    <entry file="file://$PROJECT_DIR$/Player.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1218">
-          <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
+        <state relative-caret-position="-1787">
+          <caret line="327" column="21" lean-forward="true" selection-start-line="327" selection-start-column="21" selection-end-line="327" selection-end-column="21" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
             <element signature="e#590#632#0" />
-            <element signature="e#673#2659#0" />
-            <element signature="e#5346#5917#0" />
-            <element signature="e#5958#6148#0" />
-            <element signature="e#6268#8141#0" />
-            <element signature="e#8192#9607#0" />
-            <element signature="e#10749#15918#0" />
-            <element signature="e#10267#10519#0" />
-            <element signature="e#11889#13089#0" />
-            <element signature="e#14569#14959#0" />
-            <element signature="e#13523#13818#0" />
-            <element signature="e#13820#14073#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Computer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="405" column="49" lean-forward="true" selection-start-line="405" selection-start-column="49" selection-end-line="405" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#188#494#0" />
+            <element signature="e#526#570#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+        <state relative-caret-position="168">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Minimax.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="128" column="20" lean-forward="true" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#112#3736#0" />
+          </folding>
         </state>
       </provider>
     </entry>

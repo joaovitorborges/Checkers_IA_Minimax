@@ -2,6 +2,32 @@ import string
 from copy import deepcopy
 #from anytree import Node, RenderTree
 
+
+def verifica_input(pos):
+    if  not (4 > len(pos) > 1):
+        return False
+
+    if (len(pos) == 3):
+        aux = list(pos)
+        X = aux[0] + aux[1]  # X = first 2 digits
+        Y = aux[2]
+
+        if not str.isdigit(X):
+            return False
+        if not str.isalpha(Y):
+            return False
+
+    else:
+        X, Y = list(pos)
+
+        if not str.isdigit(X):
+            return False
+        if not str.isalpha(Y):
+            return False
+
+    return True
+
+
 def read_pos(pos):          # read inputs such as "9c" or "10d" and return them as coordinates
 
     if (len(pos) == 3):                    # if its 3 digits
@@ -19,7 +45,19 @@ def read_pos(pos):          # read inputs such as "9c" or "10d" and return them 
 def transform_pos(X,Y):
     return str(10-X) + string.ascii_letters[Y]
 
-def Player_Can_Capture(tabuleiro):
+
+def victory(tabuleiro):
+    p = 0
+    b = 0
+    for line in tabuleiro:
+        p += line.count('p') + line.count('P')
+        b += line.count('b') + line.count('B')
+
+    if b > 0 and p == 0:
+        return True
+    return False
+
+def Can_Capture(tabuleiro):
     for i in range(10):
         for j in range(10):
             if tabuleiro[i][j] == 'b':                                                 # if its a 'b' piece
@@ -127,31 +165,6 @@ def Possible_Captures_Piece(tabuleiro, piece):
 
     return possible_captures
 
-def Maior_Captura2(lista,tabuleiro):
-
-    moves = Possible_Captures(tabuleiro)
-
-    if len(moves) == 0:
-        return lista
-
-    sequence_list = []
-
-    for move in moves:
-        copia = deepcopy(tabuleiro)
-        Player_Move(transform_pos(move[0][0],move[0][1]),transform_pos(move[1][0],move[1][1]),copia,False)
-        lista2 = deepcopy(lista)
-        lista2.append(move)
-        sequence_list.append(Maior_Captura2(lista2,copia))
-
-    B = 0
-    B_sequence = []
-
-    for sequence in sequence_list:
-        if len(sequence) > B:
-            B = len(sequence)
-            B_sequence = sequence
-
-    return B_sequence
 
 def Maior_Captura3(lista,tabuleiro):
 
@@ -168,7 +181,7 @@ def Maior_Captura3(lista,tabuleiro):
 
     for move in moves:       # chama recursão de cada movimento de captura possivel
         copia = deepcopy(tabuleiro)
-        Player_Move(transform_pos(move[0][0],move[0][1]),transform_pos(move[1][0],move[1][1]),copia,False)  # faz o movimento
+        Move(transform_pos(move[0][0], move[0][1]), transform_pos(move[1][0], move[1][1]), copia, False)  # faz o movimento
         lista2 = deepcopy(lista)
         lista2.append(move)
         sequence_matrixes.append(Maior_Captura3(lista2,copia))   # chama a recursão para o novo estado encontrado, e adiciona o resultado
@@ -300,12 +313,18 @@ def Is_Open_Diagonal(X,Y,toX,toY,tabuleiro):
     return False
 
 
+def Move(piece, position, tabuleiro, print_move):  #Move("4b","5c")
+        V_piece = verifica_input(piece)
+        V_position = verifica_input(position)
 
-def Player_Move(piece, position, tabuleiro, print_move):  #Move("4b","5c")
+        if not V_piece or not V_position:
+            print("Escolha posições corretas (Ex: 10b,6a)")
+            return False
+
         X,Y = read_pos(piece)
         toX,toY = read_pos(position)
 
-        can_capture = Player_Can_Capture(tabuleiro)
+        can_capture = Can_Capture(tabuleiro)
         moved = False
 
         selected = tabuleiro[X][Y]
