@@ -176,7 +176,7 @@ def heuristic2(board):
 
     count = 1
     for line in board:
-        if count <= 5:
+        if count >= 5:
             p += line.count('p')*7 + line.count('P') * 10
             b += line.count('b')*5 + line.count('B') * 10
 
